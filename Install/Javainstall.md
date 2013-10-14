@@ -1,6 +1,7 @@
 Install JDK
 ===========
-Download Oracle JDK from Oracle download page (in my case jdk-7u21-linux-x64.tar.gz)
+Download Oracle JDK from [Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (in my case jdk-7u21-linux-x64.tar.gz)
+
 Open Terminal window and go to the directory where you downloaded the above file. Un-tar the file and it will create a directory with the name jdk1.7.0_21 
 ```
   tar –xzf jdk-7u21-linux-x64.tar.gz
