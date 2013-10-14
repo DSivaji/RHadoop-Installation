@@ -19,18 +19,18 @@ Check configured SSH setup by connecting to your local meching with hduser user.
 	ssh localhost
 	exit
 ```
-Download a new stable version of hadoop (haddop-x.x.x.tar.gz file. In my case it is hadoop-1.0.4.tar.gz). Go to the downloaded directory and un-tar the file it will create a directory call hadoop-1.0.4
+Download a new stable version of hadoop (haddop-x.x.x.tar.gz file. In my case it is hadoop-1.1.2.tar.gz). Go to the downloaded directory and un-tar the file it will create a directory call hadoop-1.1.2
 ```
-	tar –xzf hadoop-1.0.4.tar.gz
+	tar –xzf hadoop-1.1.2.tar.gz
 ```
-Move directory hadoop-1.0.4 to /usr/local and change ownership to hduser using sudo access
+Move directory hadoop-1.1.2 to /usr/local and change ownership to hduser using sudo access
 ```
-	sudo mv hadoop-1.0.4 /usr/local
-	sudo chown –R hduser:hadoop /usr/local/hadoop-1.0.4
+	sudo mv hadoop-1.1.2 /usr/local
+	sudo chown –R hduser:hadoop /usr/local/hadoop-1.1.2
 ```
-Create soft-links to easy access for hadoop-1.0.4 directory 
+Create soft-links to easy access for hadoop-1.1.2 directory 
 ```
-	sudo ln –s /usr/local/hadoop-1.0.4 /usr/local/hadoop
+	sudo ln –s /usr/local/hadoop-1.1.2 /usr/local/hadoop
 ```
 Make directories for Hadoop processing which will act as base temporary directory both for the local file system and HDFS (Hadoop file system). Also make hduser its owner. Thne switch to hduser
 ```
@@ -139,7 +139,7 @@ Move the file into the HDFS system
 ```
 Run the word count program
 ```
-	hadoop jar hadoop-examples-1.0.4.jar wordcount /hdfs/wctest /hdfs/wctestopt
+	hadoop jar hadoop-examples-1.1.2.jar wordcount /hdfs/wctest /hdfs/wctestopt
 ```
 Output should apper as words and count of the words
 ```
