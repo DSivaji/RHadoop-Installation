@@ -38,4 +38,4 @@ Exit for the terminal and open a new terminal. Now you are ready to use hive
 ####How to check hive working right?
 
   * To start the hive cluster(make sure hadoop started already) ```hvstart```. It should show up a command prompt as "hive>"
-  * Then type ```show tables;``` and then hit enter it should run properly without showing any errors. It will show “OK” since there is now preloaded table in hive
+  * Then type ```show tables;``` and then hit enter it should run properly without showing any errors. It will show “OK” since there is no preloaded table in hive
