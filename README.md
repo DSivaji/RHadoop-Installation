@@ -13,5 +13,9 @@ Here are the steps to follow to setup a single node hadoop cluster, Hive and R
 6.	Install required packages
 7.	Configuring R, hadoop and hive
 
-
-
+Note: 
+•	Check your system type, is it 32 bit or 64 bit (in my case it is 64 bit)
+•	Be aware of your application versions
+Install freshly a new Ubuntu (in my case Version: 13.04 on Oracle Virtual Box) with fully upgraded over the net with some basic applications 
+  1. sudo apt-get install vim # Modified vi editor
+  2. sudo apt-get install ssh # Hadoop cluster works on SSH network to manages its resources
