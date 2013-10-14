@@ -1,5 +1,4 @@
-Install Hadoop (single node cluster)
-=====================================
+##Install Hadoop (single node cluster)
 
 Create a dedicated user group(as hadoop) and user(as hduser) to maintain Hadoop cluster(use sudo access)
 ```
