@@ -1,4 +1,4 @@
-RHadoop-Installation-
+RHadoop Installation
 =====================
 
 Setup a Hadoop cluster at your home and configure R to analyze your data
