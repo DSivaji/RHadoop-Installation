@@ -1,7 +1,7 @@
 ## Hive Installation 
 
 
-Please check Hive compatible version for Hadoop and download from [here](http://hive.apache.org/releases.html)
+Please check Hive [compatible](http://hive.apache.org/releases.html) with for Hadoop version and [download](http://mirror.reverse.net/pub/apache/hadoop/common/stable/) it.
 
 Log in as admin for sudo access
 
