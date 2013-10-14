@@ -140,7 +140,7 @@ Move the file into the HDFS system
 ```
 Run the word count program
 ```
-	hadoop jar hadoop-examples-1.1.2.jar wordcount /hdfs/wctest /hdfs/wctestopt
+	hadoop jar hadoop-examples-1.0.4.jar wordcount /hdfs/wctest /hdfs/wctestopt
 ```
 Output should apper as words and count of the words
 ```
