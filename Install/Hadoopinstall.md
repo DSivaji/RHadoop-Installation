@@ -19,7 +19,7 @@ Check configured SSH setup by connecting to your local meching with hduser user.
 	ssh localhost
 	exit
 ```
-Download a new stable version of hadoop (haddop-x.x.x.tar.gz file. In my case it is hadoop-1.1.2.tar.gz). Go to the downloaded directory and un-tar the file it will create a directory call hadoop-1.1.2
+[Download](http://mirror.reverse.net/pub/apache/hadoop/common/stable/) a new stable version of hadoop (haddop-x.x.x.tar.gz file. In my case it is hadoop-1.1.2.tar.gz). Go to the downloaded directory and un-tar the file it will create a directory call hadoop-1.1.2
 ```
 	tar –xzf hadoop-1.1.2.tar.gz
 ```
