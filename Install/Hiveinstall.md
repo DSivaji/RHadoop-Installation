@@ -1,11 +1,11 @@
 ## Hive Installation 
 
 
-Please check Hive [compatible](http://hive.apache.org/releases.html) with for Hadoop version and [download](http://mirror.reverse.net/pub/apache/hadoop/common/stable/) it.
+Please check Hive [compatibility](http://hive.apache.org/releases.html) with Hadoop version and [download](http://mirror.reverse.net/pub/apache/hadoop/common/stable/) it.
 
 Log in as admin for sudo access
 
-Download a hive tar.gz file by checking compatibility with Hadoop version (hive-x.x.x.tar.gz file. In my case it is hive-0.10.0.tar.gz)
+Un-tar the hive tar.gz file (hive-x.x.x.tar.gz file. In my case it is hive-0.10.0.tar.gz)
 
 Go to the downloaded directory and un-tar the file it will create a directory call hive-0.10.0.
 ```
