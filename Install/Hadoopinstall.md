@@ -81,29 +81,29 @@ Set hadoop environmental variable and alias in your bash shell config file(i.e. 
 Edit core-site.xml file and add below text within <configuration></configuration> tags
 ```
 	<property>
-	<name>hadoop.tmp.dir</name>
-	<value>/app/hadoop/tmp</value>
-	<description>Base folder for other temporary directories.</description>
+	  <name>hadoop.tmp.dir</name>
+	  <value>/app/hadoop/tmp</value>
+	  <description>Base folder for other temporary directories.</description>
 	</property><property>
-	<name>fs.default.name</name>
-	<value>hdfs://localhost:2810</value>
-	<description>This is name of default file system.</description>
+	  <name>fs.default.name</name>
+	  <value>hdfs://localhost:2810</value>
+	  <description>This is name of default file system.</description>
 	</property>
 ```
 Edit mapred-site.xml file and add below text within <configuration></configuration> tags
 ```
 	<property>
-	<name>mapred.job.tracker</name>
-	<value>localhost:2811</value>
-	<description>The host and port that the MapReduce job tracker runs at.</description>
+	  <name>mapred.job.tracker</name>
+	  <value>localhost:2811</value>
+	  <description>The host and port that the MapReduce job tracker runs at.</description>
 	</property>
 ```
 Edit hdfs-site.xml file and add below text within <configuration></configuration> tag. After that save and exit file as in step 12.
 ```
 	<property>
-	<name>dfs.replication</name>
-	<value>1</value>
-	<description>Default data blocks replication</description>
+	  <name>dfs.replication</name>
+	  <value>1</value>
+	  <description>Default data blocks replication</description>
 	</property>
 ```
 Format HDFS filesystem via the NameNod
