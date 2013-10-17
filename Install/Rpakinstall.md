@@ -50,4 +50,4 @@ sudo CMD build ./RHive
 sudo R CMD INSTALL --byte-compile RHive_2.0-0.0.tar.gz
 ```
 
-Note: Recommended use R-Studio IDE
+Note: Recommended to install R-Studio IDE
