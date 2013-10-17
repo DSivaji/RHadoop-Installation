@@ -28,7 +28,7 @@ Install and update basic and R related required applications
 ```
 Now check R installed correctly compiled using --enable-R-shlib. ```sudo R CMD config --ldflags``` It will print a path, take the printed path and check the "libR.so" file exist in that location. If you couldn't see the file then something must gone worng.
 
-If you install R successfully, follow below steps
+If you install R successfully, follow next steps
 
-Get full access for hduser to install packages in R ```sudo chmod 777 /usr/local/lib/R/site-library```
+
 
