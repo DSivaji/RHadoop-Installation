@@ -16,7 +16,7 @@ Note:
 1. Check your system type, is it 32 bit or 64 bit (in my case it is 64 bit)
 2. Be aware of your application versions
 
-Install freshly a new Ubuntu (in my case Version: 13.04 on Oracle Virtual Box) with fully upgraded over the net with some basic applications 
+Install freshly a new Ubuntu (in my case Version: 13.04 on Oracle Virtual Box) with fully upgraded over internet with some basic applications 
 ```
   sudo apt-get install vim # Modified vi editor
   sudo apt-get install ssh # Hadoop cluster works on SSH network to manages its resources
