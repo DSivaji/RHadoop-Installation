@@ -33,4 +33,4 @@ Let’s also install Java plugin on your Firefox web-browser
    * Verify if it is working: Open Firefox browsers and type ```about:plugins``` in the address bar, you could see an entry for Java. 
 
 
-######[<< Back](Home.md)
+######[<< Back](Home.md) 
