@@ -1,6 +1,17 @@
 ##Install R with shared libraries
 
-Please read [instruction](http://cran.r-project.org/bin/linux/ubuntu/README) here before install R in Ubuntu. 
+Install required Ubuntu applications for R and it's packages
+```
+  sudo apt-get update
+  sudo apt-get install make
+  sudo apt-get install libssl-dev
+  sudo apt-get install ant
+  sudo apt-get install git
+  sudo apt-get install build-essential
+  sudo apt-get install libcurl4-gnutls-dev
+```
+
+Read [instruction](http://cran.r-project.org/bin/linux/ubuntu/README) here before install R in Ubuntu. 
 Get sudo access and add below entries in ```/etc/apt/sources.list``` file to obtain latest R packages. Remember to update below lines with your Ubuntu release name. 
 
 ```
@@ -15,15 +26,10 @@ system with below commands
 ```
 Install and update basic and R related required applications 
 ```
-  sudo apt-get update
-  sudo apt-get install make
-  sudo apt-get install build-essential
-  sudo apt-get install libcurl4-gnutls-dev
   sudo apt-get build-dep r-base
   sudo apt-get install r-base r-recommended r-base-dev
   sudo apt-get install r-base-html r-doc-pdf
   sudo apt-get install littler
-  sudo apt-get install libssl-dev
   sudo update-alternatives --config java #Update with latest Java version
   sudo R CMD javareconf
 ```
