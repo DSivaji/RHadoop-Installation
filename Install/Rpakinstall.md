@@ -17,16 +17,37 @@ sudo R --no-save << EOF
 EOF
 ```
 
-####Install rhdfs
-
-
-
-####Install rmr2
-
-
+####Install RHadoop
+It requires rhdfs,rmr2 packages and [download](https://github.com/RevolutionAnalytics/RHadoop/wiki/Downloads) them and install as below
+```
+cd ~/Downloads
+sudo HADOOP_CMD=/usr/local/hadoop/bib/hadoop R CMD INSTALL rhdfs_1.0.7.tar.gz
+sudo R CMD INSTALL rmr2_2.3.0.tar.gz
+```
 
 ####Install plyrmr
+First install require packages and then install plyrmr
+```
+sudo R --no-save <<EOF
+library(devtools)
+install_github("pryr","hadley")
+install.packages("hydroPSO",dep=T,repos="http://cran.csiro.au/")
+EOF
 
-
+R CMD INSTALL plyrmr_0.1.0.tar.gz
+```
 
 ####Install RHive
+First clone the git repo, build the source code and then install most recent package
+```
+cd ~/Downloads
+mkdir RHive_source
+cd RHive_source
+git clone git://github.com/nexr/RHive.git
+cd Rhive
+ant build
+sudo CMD build ./RHive
+sudo R CMD INSTALL --byte-compile RHive_2.0-0.0.tar.gz
+```
+
+Note: Recommended use R-Studio IDE
