@@ -112,10 +112,9 @@ Format HDFS filesystem via the NameNod
 ```
 You should find a message line in output "/hadoop-hduser/dfs/name has been successfully formatted." Exit from the terminal and open a new terminal. 
 
-Now you are ready to use hadoop
-Now start hadoop ```hdstart #@ command prompt```working right and it should not ask for anything ```hdstart```
+Now you are ready to use hadoop. To start hadoop use ```hdstart```. If it is working right then it will ask for anything.
 
-Now you could open browser HDFS file and see without an error message
+You could open browser HDFS file and see without an error message
 
 	http://localhost:50070/ – NameNode daemon (HDFS Layer)
 	http://localhost:50030/ – JobTracker daemon (MapReduce Layer)
