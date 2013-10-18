@@ -1,6 +1,6 @@
 ##Install Hadoop (single node cluster)
 
-Create a dedicated user group(as hadoop) and user(as hduser) to maintain Hadoop cluster(use sudo access)
+Create a dedicated user group(as hadoop) and user(as hduser) to maintain Hadoop cluster
 ```
 	sudo addgroup hadoop #creating user group
 	sudo adduser –ingroup hadoop hduser # creating user
@@ -18,12 +18,13 @@ Check configured SSH setup by connecting to your local meching with hduser user.
 ```
 	ssh localhost
 	exit
+	exit
 ```
 [Download](http://mirror.reverse.net/pub/apache/hadoop/common/stable/) a new stable version of hadoop (haddop-x.x.x.tar.gz file. In my case it is hadoop-1.2.1.tar.gz). Go to the downloaded directory and un-tar the file it will create a directory call hadoop-1.2.1
 ```
 	tar –xzf hadoop-1.2.1.tar.gz
 ```
-Move directory hadoop-1.2.1 to /usr/local and change ownership to hduser using sudo access
+Move directory hadoop-1.2.1 to /usr/local and change ownership to hduser
 ```
 	sudo mv hadoop-1.2.1 /usr/local
 	sudo chown –R hduser:hadoop /usr/local/hadoop-1.2.1
@@ -109,11 +110,11 @@ Format HDFS filesystem via the NameNod
 	cd /usr/local/hadoop/bin
 	./hadoop namenode –format
 ```
-You should find a message line in output "/hadoop-hduser/dfs/name has been successfully formatted." Exit from the terminal and open a new terminal. Now you are ready to use hadoop
-Now start hadoop working right and it should not ask for anything
-```
-	hdstart
-```
+You should find a message line in output "/hadoop-hduser/dfs/name has been successfully formatted." Exit from the terminal and open a new terminal. 
+
+Now you are ready to use hadoop
+Now start hadoop ```hdstart #@ command prompt```working right and it should not ask for anything ```hdstart```
+
 Now you could open browser HDFS file and see without an error message
 
 	http://localhost:50070/ – NameNode daemon (HDFS Layer)
@@ -125,7 +126,7 @@ Now you could open browser HDFS file and see without an error message
 Create a directory to save all your HDFS file using sudo access
 ```
 	sudo mkdir /hdfs
-	sudo chown -R 1000:1000 /hdfs
+	sudo chown -R hduser:hadoop /hdfs
 ```
 Create a text file in your /tmp directory
 ```
