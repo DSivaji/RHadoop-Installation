@@ -3,12 +3,12 @@
 Create a dedicated user group(as hadoop) and user(as hduser) to maintain Hadoop cluster
 ```
 	sudo addgroup hadoop #creating user group
-	sudo adduser –ingroup hadoop hduser # creating user
+	sudo adduser --ingroup hadoop hduser # creating user
 ```
 Switch to hduser and create a RSA key to hduser for password-less connection to SSH. It will  ask for “file in which to save the key” please hit enter
 ```
 	su hduser #switching user
-	ssh-keygen –t rsa –P ""
+	ssh-keygen -t rsa -P ""
 ```
 Enable SSH access to your local machine with newly created key
 ```
@@ -22,12 +22,13 @@ Check configured SSH setup by connecting to your local meching with hduser user.
 ```
 [Download](http://mirror.reverse.net/pub/apache/hadoop/common/stable/) a new stable version of hadoop (haddop-x.x.x.tar.gz file. In my case it is hadoop-1.2.1.tar.gz). Go to the downloaded directory and un-tar the file it will create a directory call hadoop-1.2.1
 ```
-	tar –xzf hadoop-1.2.1.tar.gz
+	cd ~/Downloads
+	tar -xzf hadoop-1.2.1.tar.gz
 ```
 Move directory hadoop-1.2.1 to /usr/local and change ownership to hduser
 ```
 	sudo mv hadoop-1.2.1 /usr/local
-	sudo chown –R hduser:hadoop /usr/local/hadoop-1.2.1
+	sudo chown -R hduser:hadoop /usr/local/hadoop-1.2.1
 ```
 Create soft-links to easy access for hadoop-1.2.1 directory 
 ```
