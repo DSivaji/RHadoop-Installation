@@ -39,15 +39,6 @@ Make directories for Hadoop processing which will act as base temporary director
 	sudo chmod -R 777 /app
 	su hduser
 ```
-Get into hadoop config directory and configure your hadoop conf file
-```
-	cd /usr/local/hadoop/conf/
-```
-Edit hadoop-env.sh to add enivronment variable
-```
-	echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >>cd /usr/local/hadoop/conf/hadoop-env.sh
-	echo "export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_21/" >>cd /usr/local/hadoop/conf/hadoop-env.sh
-```
 Set hadoop environmental variable and alias in your bash shell config file(i.e. ~/.bashrc)
 ```
 	# Set Hadoop-related environment variables
@@ -78,6 +69,13 @@ Set hadoop environmental variable and alias in your bash shell config file(i.e. 
 	export PATH=$PATH:$HADOOP_PREFIX/bin
 	export PATH=$PATH:$JAVA_HOME/bin
 ```
+Get into hadoop config directory and edit hadoop-env.sh,core-site.xml,mapred-site.xml,hdfs-site.xml files
+```
+	echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >>cd /usr/local/hadoop/conf/hadoop-env.sh
+	echo "export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_21/" >>cd /usr/local/hadoop/conf/hadoop-env.sh
+	cd /usr/local/hadoop/conf/
+```
+
 Edit core-site.xml file and add below text within <configuration></configuration> tags
 ```
 	<property>
@@ -108,8 +106,8 @@ Edit hdfs-site.xml file and add below text within <configuration></configuration
 ```
 Format HDFS filesystem via the NameNod
 ```
-	d /usr/local/hadoop/bin
-	/hadoop namenode –format
+	cd /usr/local/hadoop/bin
+	./hadoop namenode –format
 ```
 You should find a message line in output "/hadoop-hduser/dfs/name has been successfully formatted." Exit from the terminal and open a new terminal. Now you are ready to use hadoop
 Now start hadoop working right and it should not ask for anything
