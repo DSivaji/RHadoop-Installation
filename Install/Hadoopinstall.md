@@ -57,11 +57,11 @@ Set hadoop environmental variable and alias in your bash shell config file(i.e. 
 	export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_21/
 	# Some convenient aliases and functions for running Hadoop-related commands
 	unalias fs &> /dev/null
-	alias fs=”hadoop fs”
+	alias fs="hadoop fs"
 	unalias hls &> /dev/null
-	alias hls=”fs -ls”
-	alias hdstart=” cd /usr/local/hadoop && bin/start-all.sh”
-	alias hdstop=” cd /usr/local/hadoop && bin/stop-all.sh”
+	alias hls="fs -ls"
+	alias hdstart="cd /usr/local/hadoop && bin/start-all.sh"
+	alias hdstop="cd /usr/local/hadoop && bin/stop-all.sh"
 	# If you have LZO compression enabled in your Hadoop cluster and
 	# compress job outputs with LZOP (not covered in this tutorial):
 	# Conveniently inspect an LZOP compressed file from the command
