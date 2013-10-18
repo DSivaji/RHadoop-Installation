@@ -1,24 +1,24 @@
 ## Hive Installation 
 
 
-Please check Hive [compatibility](http://hive.apache.org/releases.html) with Hadoop version and [download](http://mirror.reverse.net/pub/apache/hadoop/common/stable/) it.
+Please check Hive [compatibility](http://hive.apache.org/releases.html) with Hadoop version and [download](http://apache.spinellicreations.com/hive/stable/) it.
 
 Log in as admin for sudo access
 
-Un-tar the hive tar.gz file (hive-x.x.x.tar.gz file. In my case it is hive-0.10.0.tar.gz)
+Un-tar the hive tar.gz file (hive-x.x.x.tar.gz file. In my case it is hive-0.11.0.tar.gz)
 
-Go to the downloaded directory and un-tar the file it will create a directory call hive-0.10.0.
+Go to the downloaded directory and un-tar the file it will create a directory call hive-0.11.0.
 ```
-  tar –xzf hive-0.10.0.tar.gz
+  tar –xzf hive-0.11.0.tar.gz
 ```
 Move directory hive-0.10.0 to /usr/local and change ownership to hduser using sudo access
 ```
-  sudo mv hive-0.10.0 /usr/local
-  sudo chown –R hduser:hadoop /usr/local/hive-0.10.0
+  sudo mv hive-0.11.0 /usr/local
+  sudo chown –R hduser:hadoop /usr/local/hive-0.11.0
 ```
 Create soft-links to easy access for hive-0.10.0 directory 
 ```
-  sudo ln –s /usr/local/hive-0.10.0 /usr/local/hive
+  sudo ln –s /usr/local/hive-0.11.0 /usr/local/hive
 ```
 Switch to hduser ```su hduser```
 
