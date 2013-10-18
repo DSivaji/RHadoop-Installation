@@ -32,7 +32,7 @@ Move directory hadoop-1.2.1 to /usr/local and change ownership to hduser
 ```
 Create soft-links to easy access for hadoop-1.2.1 directory 
 ```
-	sudo ln –s /usr/local/hadoop-1.2.1 /usr/local/hadoop
+	sudo ln -s /usr/local/hadoop-1.2.1 /usr/local/hadoop
 ```
 Make directories for Hadoop processing which will act as base temporary directory both for the local file system and HDFS (Hadoop file system). Also make hduser its owner. Thne switch to hduser
 ```
@@ -73,8 +73,9 @@ Set hadoop environmental variable and alias in your bash shell config file(i.e. 
 ```
 Get into hadoop config directory and edit hadoop-env.sh,core-site.xml,mapred-site.xml,hdfs-site.xml files
 ```
-	echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >>cd /usr/local/hadoop/conf/hadoop-env.sh
-	echo "export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45/" >>cd /usr/local/hadoop/conf/hadoop-env.sh
+	chmod 722 /usr/local/hadoop/conf/*
+	echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >>/usr/local/hadoop/conf/hadoop-env.sh
+	echo "export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45/" >>/usr/local/hadoop/conf/hadoop-env.sh
 	cd /usr/local/hadoop/conf/
 ```
 
@@ -109,11 +110,11 @@ Edit hdfs-site.xml file and add below text within <configuration></configuration
 Format HDFS filesystem via the NameNod
 ```
 	cd /usr/local/hadoop/bin
-	./hadoop namenode –format
+	./hadoop namenode -format
 ```
 You should find a message line in output "/hadoop-hduser/dfs/name has been successfully formatted." Exit from the terminal and open a new terminal. 
 
-Now you are ready to use hadoop. To start hadoop use ```hdstart```. If it is working right then it will ask for anything.
+Now you are ready to use hadoop. Login as hduser and start hadoop ```hdstart```. If it is working right then it will ask for anything.
 
 You could open browser HDFS file and see without an error message
 
@@ -127,6 +128,7 @@ Create a directory to save all your HDFS file using sudo access
 ```
 	sudo mkdir /hdfs
 	sudo chown -R hduser:hadoop /hdfs
+	su hduser
 ```
 Create a text file in your /tmp directory
 ```
