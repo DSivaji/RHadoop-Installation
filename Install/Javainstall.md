@@ -5,7 +5,7 @@ Download Oracle JDK from [Oracle download page](http://www.oracle.com/technetwor
 
 Open Terminal window and go to the directory where you downloaded the above file. Un-tar the file and it will create a directory with the name jdk1.7.0_45 
 ```
-  tar –xzf jdk-7u45-linux-x64.tar.gz
+  tar -xzf jdk-7u45-linux-x64.tar.gz
 ```
 Create a directory “jvm” under the path /usr/lib using sudo access
 ```
@@ -27,7 +27,7 @@ Now just update and configure to use as default on your machine
 ```
 Let’s also install Java plugin on your Firefox web-browser
    * Goto Firefox plugins folder
-``` cd /usr/lib/firefox/plugins/ #or use cd /usr/lib/mozila/plugins/```
+``` cd /usr/lib/mozilla/plugins/```
    * Create a soft-link to java browser plugin file
 ``` sudo ln -s /usr/lib/jvm/jdk1.7.0_45/jre/lib/amd64/libnpjp2.so ```
    * Verify if it is working: Open Firefox browsers and type ```about:plugins``` in the address bar, you could see an entry for Java. 
