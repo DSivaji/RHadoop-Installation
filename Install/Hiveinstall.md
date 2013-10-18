@@ -9,16 +9,16 @@ Un-tar the hive tar.gz file (hive-x.x.x.tar.gz file. In my case it is hive-0.11.
 
 Go to the downloaded directory and un-tar the file it will create a directory call hive-0.11.0.
 ```
-  tar –xzf hive-0.11.0.tar.gz
+  tar -xzf hive-0.11.0.tar.gz
 ```
-Move directory hive-0.10.0 to /usr/local and change ownership to hduser using sudo access
+Move directory hive-0.11.0 to /usr/local and change ownership to hduser using sudo access
 ```
   sudo mv hive-0.11.0 /usr/local
-  sudo chown –R hduser:hadoop /usr/local/hive-0.11.0
+  sudo chown -R hduser:hadoop /usr/local/hive-0.11.0
 ```
 Create soft-links to easy access for hive-0.10.0 directory 
 ```
-  sudo ln –s /usr/local/hive-0.11.0 /usr/local/hive
+  sudo ln -s /usr/local/hive-0.11.0 /usr/local/hive
 ```
 Switch to hduser ```su hduser```
 
