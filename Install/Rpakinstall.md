@@ -3,10 +3,13 @@
 ####Install dependent packages for Rhadoop
 Get full access for hduser to install R packages with out any issues ```sudo chmod 777 /usr/local/lib/R/site-library```
 
-Add required enivronment
+Add required enivronment to```/etc/bash.bashrc```
 ```
-echo "export HADOOP_CMD=/usr/local/hadoop/bin/hadoop" >>/ect/bash.bashrc
-echo "export R_HOME=/usr/lib/R" >> $HADOOP_HOME/conf/hadoop-env.sh
+export HADOOP_CMD=/usr/local/hadoop/bin/hadoop
+```
+Add required enivronment to```$HADOOP_HOME/conf/hadoop-env.sh```
+```
+export R_HOME=/usr/lib/R 
 ```
 
 Install required R packages for Rhadoop
