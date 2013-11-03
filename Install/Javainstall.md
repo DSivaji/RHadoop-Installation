@@ -3,17 +3,18 @@
 
 Download Oracle JDK from [Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (in my case jdk-7u45-linux-x64.tar.gz)
 
-Open Terminal window and go to the directory where you downloaded the above file. Un-tar the file and it will create a directory with the name jdk1.7.0_45 
+Open Terminal and go to the directory where you downloaded the file. Un-tar the file and it will create a directory with the name jdk1.7.0_45 
 ```
   tar -xzf jdk-7u45-linux-x64.tar.gz
 ```
-Create a directory “jvm” under the path /usr/lib using sudo access
+Create a directory "jvm" under the path /usr/lib using sudo access
 ```
   sudo mkdir -p /usr/lib/jvm
 ```
-Move the directory jdk1.7.0_45 to the created directory in Step 3 using sudo access
+Move the directory jdk1.7.0_45 to the created directory
 ```
   sudo mv jdk1.7.0_45 /usr/lib/jvm/
+  cd /usr/lib/jvm/jdk1.7.0_45/
 ```
 Update alternatives of java, javac & javaws to Ubuntu environment with sudo access
 ``` 
@@ -24,6 +25,10 @@ Update alternatives of java, javac & javaws to Ubuntu environment with sudo acce
 Now just update and configure to use as default on your machine
 ```
   sudo update-alternatives --config java
+```
+Create a enivronment variable for JAVA_HOME
+```
+  export JAVA_HOME=$PWD
 ```
 Let’s also install Java plugin on your Firefox web-browser
    * Goto Firefox plugins folder
