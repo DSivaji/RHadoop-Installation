@@ -99,7 +99,7 @@ Edit mapred-site.xml file and add below text within <configuration></configurati
 	  <description>The host and port that the MapReduce job tracker runs at.</description>
 	</property>
 ```
-Edit hdfs-site.xml file and add below text within <configuration></configuration> tag. After that save and exit file as in step 12.
+Edit hdfs-site.xml file and add below text within <configuration></configuration> tag. After that save and exit from the terminal.
 ```
 	<property>
 	  <name>dfs.replication</name>
@@ -107,7 +107,7 @@ Edit hdfs-site.xml file and add below text within <configuration></configuration
 	  <description>Default data blocks replication</description>
 	</property>
 ```
-Format HDFS filesystem via the NameNod
+Open a new terminal and format HDFS filesystem via the NameNod
 ```
 	cd /usr/local/hadoop/bin
 	./hadoop namenode -format
