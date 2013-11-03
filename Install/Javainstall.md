@@ -14,7 +14,6 @@ Create a directory "jvm" under the path /usr/lib using sudo access
 Move the directory jdk1.7.0_45 to the created directory
 ```
   sudo mv jdk1.7.0_45 /usr/lib/jvm/
-  cd /usr/lib/jvm/jdk1.7.0_45/
 ```
 Update alternatives of java, javac & javaws to Ubuntu environment with sudo access
 ``` 
@@ -25,10 +24,6 @@ Update alternatives of java, javac & javaws to Ubuntu environment with sudo acce
 Now just update and configure to use as default on your machine
 ```
   sudo update-alternatives --config java
-```
-Create a enivronment variable for JAVA_HOME
-```
-  export JAVA_HOME=$PWD
 ```
 Let’s also install Java plugin on your Firefox web-browser
    * Goto Firefox plugins folder
