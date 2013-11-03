@@ -34,7 +34,7 @@ Edit .bashrc file.
   alias hvsst="cd /usr/local/hive/ && bin/hive --service hiveserver"
   alias hvsst2="cd /usr/local/hive/ && bin/hive --service hiveserver2"
 ```
-Exit for the terminal and open a new terminal. Now you are ready to use hive
+Exit from the terminal and open a new terminal. Now you are ready to use hive
 
 ####How to check hive working right?
 
