@@ -27,7 +27,7 @@ Edit .bashrc file.
 ```
   #setting up hive home path
   export HIVE_HOME=/usr/local/hive
-  export PATH=$PATH:$HIVE_HOME
+  export PATH=$HIVE_HOME/bin:$PATH
   #creating alias for start hive
   alias hvstart="cd /usr/local/hive/ && bin/hive"
   #creating alias for start hive thrift server mode
