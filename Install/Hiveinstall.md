@@ -27,11 +27,12 @@ Edit .bashrc file.
 ```
   #setting up hive home path
   export HIVE_HOME=/usr/local/hive
-  export PATH=$PATH:$HIVE_HOME/usr/local/hive
+  export PATH=$PATH:$HIVE_HOME
   #creating alias for start hive
   alias hvstart="cd /usr/local/hive/ && bin/hive"
   #creating alias for start hive thrift server mode
   alias hvsst="cd /usr/local/hive/ && bin/hive --service hiveserver"
+  alias hvsst2="cd /usr/local/hive/ && bin/hive --service hiveserver2"
 ```
 Exit for the terminal and open a new terminal. Now you are ready to use hive
 
