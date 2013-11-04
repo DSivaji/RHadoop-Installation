@@ -73,8 +73,7 @@ hdfs.ouput=function(hdfsobj)
   return(data.frame(Key=r$key,Val=r$val))  
 }
 
-
-#Word count example
+#MapReduce for Word count
 wordcount=function(input,output=NULL,pattren=" ")
 {
      return(mapreduce(input=input,output=output,input.format="text",
@@ -83,3 +82,4 @@ wordcount=function(input,output=NULL,pattren=" ")
 }
 
 hdfs.ouput(wordcount(input='/hdfs/hdfp/wctest.txt'))
+```
