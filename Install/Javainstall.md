@@ -25,7 +25,7 @@ Now just update and configure to use as default on your machine
 ```
   sudo update-alternatives --config java
 ```
-Add a JAVA_HOME global enivirnment variable in ```sudo vi /ect/bash.bashrc```
+Add a JAVA_HOME global enivirnment variable in ```sudo vi /etc/bash.bashrc```
 ```
 export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
 ```
