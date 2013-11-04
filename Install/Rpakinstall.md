@@ -24,7 +24,7 @@ R --no-save << EOF
 EOF
 ```
 
-####Install RHadoop
+####Install RHadoop and RHive
 
 Add required enivronment to```$HADOOP_HOME/conf/hadoop-env.sh```
 ```
