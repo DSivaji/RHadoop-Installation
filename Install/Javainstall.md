@@ -35,6 +35,3 @@ Let’s also install Java plugin on your Firefox web-browser
    * Create a soft-link to java browser plugin file
 ``` sudo ln -s /usr/lib/jvm/jdk1.7.0_45/jre/lib/amd64/libnpjp2.so ```
    * Verify if it is working: Open Firefox browsers and type ```about:plugins``` in the address bar, you could see an entry for Java. 
-
-
-######[<< Back] (README.md) 
