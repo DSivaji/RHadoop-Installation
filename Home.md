@@ -8,8 +8,8 @@ Here are the steps to follow to setup a single node hadoop cluster, Hive and R
 2.	[Install Hadoop (Version: Hadoop-1.2.1)](Install/Hadoopinstall.md)
 3.	[Install Hive (Version: Hive-0.11.0)](Install/Hiveinstall.md)
 4.	[Install R with shared libraries](Install/RInstall.md)
-5.	[Install required packages](Install/Rpakinstall.md)
-6.	Configuring R, hadoop and hive
+5.	[Configuring and install required packages for RHadoop and RHive](Install/Rpakinstall.md)
+6.	[Testing RHadoop and RHive](Install/Rwork.md)
 
 Note:
 
