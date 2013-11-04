@@ -44,7 +44,7 @@ sudo R CMD INSTALL rmr2_2.3.0.tar.gz
 ####Install plyrmr
 First install require packages and then install plyrmr
 ```
-sudo R --no-save <<EOF
+R --no-save <<EOF
 library(devtools)
 install_github("pryr","hadley")
 install.packages("hydroPSO",dep=T,repos="http://cran.csiro.au/")
@@ -54,7 +54,7 @@ R CMD INSTALL plyrmr_0.1.0.tar.gz
 ```
 
 ####Install RHive
-First clone the git repo, build the source code and then install most recent package
+First clone the RHive git repo, build the source code and then install most recent package
 ```
 cd ~/Downloads
 mkdir RHive_source
@@ -62,8 +62,7 @@ cd RHive_source
 git clone git://github.com/nexr/RHive.git
 cd RHive
 ant build
-sudo R CMD build ./RHive
-sudo R CMD INSTALL --byte-compile RHive_2.0-0.0.tar.gz
+R CMD INSTALL ./RHive
 ```
 
 Note: Recommended to install R-Studio IDE
