@@ -109,6 +109,10 @@ Edit hdfs-site.xml file and add below text within <configuration></configuration
 	  <value>1</value>
 	  <description>Default data blocks replication</description>
 	</property>
+	<property>
+          <name>dfs.permissions</name>
+          <value>false</value>
+        </property>
 ```
 Open a new terminal and format HDFS filesystem via the NameNod
 ```
