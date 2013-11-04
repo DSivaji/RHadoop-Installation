@@ -160,5 +160,3 @@ Output should apper as words and count of the words
 ```
 	fs -cat /hdfs/wctestopt/part-r-00000
 ```
-
-######[<< Back](Home.md)
