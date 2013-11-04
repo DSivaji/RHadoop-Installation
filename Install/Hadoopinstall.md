@@ -74,9 +74,12 @@ Set hadoop environmental variable and alias in your bash shell config file(i.e. 
 Get into hadoop config directory and edit hadoop-env.sh,core-site.xml,mapred-site.xml,hdfs-site.xml files
 ```
 	chmod 722 /usr/local/hadoop/conf/*
-	echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >>/usr/local/hadoop/conf/hadoop-env.sh
-	echo "export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45" >>/usr/local/hadoop/conf/hadoop-env.sh
 	cd /usr/local/hadoop/conf/
+```
+First edit hadoop-env.sh file. find with HADOOP_OPTS and JAVA_HOME string and un-comment and change it to
+```
+	export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
+	export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
 ```
 
 Edit core-site.xml file and add below text within <configuration></configuration> tags
