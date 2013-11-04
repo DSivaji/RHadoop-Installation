@@ -112,7 +112,14 @@ Edit hdfs-site.xml file and add below text within <configuration></configuration
 	<property>
 	  <name>dfs.permissions</name>
 	  <value>false</value>
+	  <description>Disable the permissions to write on HDFS.</description>
 	</property>
+	<property>
+	  <name>dfs.safemode.threshold.pct</name>
+	  <value>0</value>
+	  <description>Specifies the percentage of blocks that should satisfy the minimal replication requirement defined by dfs.replication.min. Values less than or equal to 0 mean not to start in safe mode. Values greater than 1 will make safe mode permanent.</description>
+	</property>
+
 ```
 Open a new terminal and format HDFS filesystem via the NameNod
 ```
