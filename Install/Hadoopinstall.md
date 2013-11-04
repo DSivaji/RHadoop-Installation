@@ -47,7 +47,7 @@ Set hadoop environmental variable and alias in your bash shell config file(i.e. 
 	export HADOOP_PREFIX=/usr/local/hadoop
 	export HADOOP_HOME=/usr/local/hadoop
 	# Set JAVA_HOME (we will also configure JAVA_HOME directly for Hadoop later on)
-	export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45/
+	export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
 	# Some convenient aliases and functions for running Hadoop-related commands
 	unalias fs &> /dev/null
 	alias fs="hadoop fs"
