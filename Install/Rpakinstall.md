@@ -1,25 +1,22 @@
 ## Install R Packages
 
 ####Install dependent packages for Rhadoop
-First update and  configure Java
+
+Add few enivronment variable to different files
+
+First add LD_LIBRARY_PATH to```sudo vi /etc/bash.bashrc```
 ```
-sudo update-alternatives --config java #Update with latest Java version
 export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/amd64/server:$JAVA_HOME/jre/lib/amd64
+```
+Update and configure Java
+```
+sudo update-alternatives --config java #Update with Java version what you have installed earlier
 sudo R CMD javareconf
 ```
 
-Get full access for hduser to install R packages with out any issues ```sudo chmod 777 /usr/local/lib/R/site-library```
+Get full access for hduser to install R packages without any issues ```sudo chmod 777 /usr/local/lib/R/site-library```
 
-Add required enivronment to```/etc/bash.bashrc```
-```
-export HADOOP_CMD=/usr/local/hadoop/bin/hadoop
-```
-Add required enivronment to```$HADOOP_HOME/conf/hadoop-env.sh```
-```
-export R_HOME=/usr/lib/R 
-```
-
-Install required R packages for Rhadoop
+Open in a new terminal login to hduser
 ```
 R --no-save << EOF
   install.packages(c("rJava","Rserve","Rcpp","RJSONIO","digest","functional","stringr","plyr","bitops","reshape2","R.methodsS3","devtools"), 
@@ -28,6 +25,15 @@ EOF
 ```
 
 ####Install RHadoop
+
+Add required enivronment to```$HADOOP_HOME/conf/hadoop-env.sh```
+```
+export R_HOME=/usr/lib/R 
+```
+Add HADOOP_CMD to```sudo vi /etc/bash.bashrc```
+```
+export HADOOP_CMD=/usr/local/hadoop/bin/hadoop
+```
 It requires rhdfs,rmr2 packages and [download](https://github.com/RevolutionAnalytics/RHadoop/wiki/Downloads) them and install as below
 ```
 cd ~/Downloads
