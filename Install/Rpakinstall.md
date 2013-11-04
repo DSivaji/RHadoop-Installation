@@ -37,8 +37,8 @@ export HADOOP_CMD=/usr/local/hadoop/bin/hadoop
 It requires rhdfs,rmr2 packages and [download](https://github.com/RevolutionAnalytics/RHadoop/wiki/Downloads) them and install as below
 ```
 cd ~/Downloads
-sudo HADOOP_CMD=/usr/local/hadoop/bib/hadoop R CMD INSTALL rhdfs_1.0.7.tar.gz
-sudo R CMD INSTALL rmr2_2.3.0.tar.gz
+HADOOP_CMD=/usr/local/hadoop/bib/hadoop R CMD INSTALL rhdfs_1.0.7.tar.gz
+R CMD INSTALL rmr2_2.3.0.tar.gz
 ```
 
 ####Install plyrmr
