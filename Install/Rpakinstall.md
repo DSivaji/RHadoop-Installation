@@ -1,6 +1,13 @@
 ## Install R Packages
 
 ####Install dependent packages for Rhadoop
+First update and  configure Java
+```
+sudo update-alternatives --config java #Update with latest Java version
+export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/amd64/server:$JAVA_HOME/jre/lib/amd64
+sudo R CMD javareconf
+```
+
 Get full access for hduser to install R packages with out any issues ```sudo chmod 777 /usr/local/lib/R/site-library```
 
 Add required enivronment to```/etc/bash.bashrc```
@@ -14,7 +21,7 @@ export R_HOME=/usr/lib/R
 
 Install required R packages for Rhadoop
 ```
-sudo R --no-save << EOF
+R --no-save << EOF
   install.packages(c("rJava","Rserve","Rcpp","RJSONIO","digest","functional","stringr","plyr","bitops","reshape2","R.methodsS3","devtools"), 
        dep=T,repos="http://cran.csiro.au/", INSTALL_opts=c('--byte-compile'))
 EOF
