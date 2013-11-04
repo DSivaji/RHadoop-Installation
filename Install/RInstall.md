@@ -26,9 +26,8 @@ Install and update basic and R related required applications
   sudo apt-get install r-base r-recommended r-base-dev
   sudo apt-get install r-base-html r-doc-pdf
   sudo apt-get install littler
-  sudo update-alternatives --config java #Update with latest Java version
-  sudo R CMD javareconf
 ```
+
 Now check R installed correctly compiled using --enable-R-shlib. ```sudo R CMD config --ldflags``` It will print a path, take the printed path and check the "libR.so" file exist in that location. If you couldn't see the file then something must gone worng.
 
 If you install R successfully, follow next steps
