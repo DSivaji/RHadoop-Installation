@@ -25,6 +25,10 @@ Now just update and configure to use as default on your machine
 ```
   sudo update-alternatives --config java
 ```
+Add a JAVA_HOME global enivirnment variable in ```sudo vi /ect/bash.bashrc```
+```
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
+```
 Let’s also install Java plugin on your Firefox web-browser
    * Goto Firefox plugins folder
 ``` cd /usr/lib/mozilla/plugins/```
