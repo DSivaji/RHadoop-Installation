@@ -73,8 +73,9 @@ Set hadoop environmental variable and alias in your bash shell config file(i.e. 
 ```
 Get into hadoop config directory and edit hadoop-env.sh,core-site.xml,mapred-site.xml,hdfs-site.xml files
 ```
-	chmod 722 /usr/local/hadoop/conf/*
 	cd /usr/local/hadoop/conf/
+	chmod 755 -R /usr/local/hadoop/conf
+	chmod 777 -R /usr/local/hadoop/logs
 ```
 First edit hadoop-env.sh file. find with HADOOP_OPTS and JAVA_HOME string and un-comment and change it to
 ```
