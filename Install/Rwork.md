@@ -77,7 +77,7 @@ hdfs.ouput=function(hdfsobj)
 wordcount=function(input,output=NULL,pattren=" ")
 {
      return(mapreduce(input=input,output=output,input.format="text",
-                      map=function(k,v) { words <- unlist(strsplit(v,split=pattren)) keyval(words,1)},
+                      map=function(k,v) { words <- unlist(strsplit(v,split=pattren)); keyval(words,1)},
                       reduce=function(k,vv) keyval(k,sum(vv))))
 }
 
